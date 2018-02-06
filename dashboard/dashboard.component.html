@@ -1,0 +1,64 @@
+<h2>DASHBOARD COMPONENTS</h2>
+<!-- <accordion>
+  <accordion-group heading="Static Header, initially expanded">
+    This content is straight in the template.
+  </accordion-group>
+  <accordion-group #group>
+    <div accordion-heading class="clearfix">
+      I can have markup, too!
+      <span class="badge badge-secondary float-right pull-right">Some HTML here</span>
+    </div>
+    This is just some content to illustrate fancy headings.
+  </accordion-group>
+  <accordion-group heading="Group with isOpenChange event listener" (isOpenChange)="log($event)">
+    <p>Some content</p>
+  </accordion-group>
+  <accordion-group heading="Another group">
+    <p>Some content</p>
+  </accordion-group>
+</accordion> -->
+
+<mat-horizontal-stepper [linear]="isLinear">
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Company" formControlName="thirdCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="primary"matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
