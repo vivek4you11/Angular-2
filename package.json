@@ -1,0 +1,19 @@
+{
+  "name": "angular2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivek4you11/Angular-2.git"
+  },
+  "author": "Vivek Mehta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivek4you11/Angular-2/issues"
+  },
+  "homepage": "https://github.com/vivek4you11/Angular-2#readme"
+}
